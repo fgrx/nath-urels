@@ -1,0 +1,41 @@
+---
+import { Markdown } from 'astro-remote';
+
+import general from "@content/general.json"
+import products from "@content/products.json"
+
+const {title:titleSite,subtitle,presentation}=general
+const {title:productTitle, products1,products2}=products
+---			
+            
+<div class="bg-secondary text-light py-6">
+    <div class="container mx-auto px-4 md:px-0">
+        <h2 class="text-center mb-6">{productTitle}</h2>
+        <div class="md:flex space-x-16">
+
+            <div class=" md:basis-1/2 border-2 border-light rounded-md w-full flex">
+                <div class="basis-1/2 py-4 px-8"><Markdown content={products1} /></div>
+                <div class="basis-1/2 py-4"><Markdown content={products2} /></div>
+            </div>
+
+            <div class="md:basis-1/2 mb-4 mt-4 md:mt-0 md:mb-0">
+                <p ><h3 class="text-2xl font-bold mb-2">{titleSite}</h3></p>
+                <p class="text-xl mb-2">{subtitle}</p>
+                <p>{presentation}</p>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<style is:global>
+ul{
+
+}
+
+li{
+    list-style-type:disc;
+
+}
+</style>

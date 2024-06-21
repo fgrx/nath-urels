@@ -5,13 +5,23 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "server:start": "npx @staticcms/proxy-server",
+    "server:serve": "http-server ./public",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.10.3",
     "@astrojs/check": "^0.7.0",
-    "typescript": "^5.4.5"
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.5.0",
+    "astro": "^4.10.3",
+    "astro-remote": "^0.3.3",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "sass": "^1.77.6"
   }
 }

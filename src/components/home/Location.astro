@@ -1,0 +1,88 @@
+---
+import Image from "astro/components/Image.astro"
+
+import openingHours from "@content/openingHours.json"
+import location from "@content/address.json"
+
+import devant from "@assets/images/devant.jpg"
+
+const{monday,thursday,tuesday,wednesday,friday,saturday,sunday}=openingHours
+const {address,postCode,city,infos}=location
+---
+
+<div class="container mx-auto text-dark">
+    <div class="px-4 md:px-0 my-12 md:flex md:flex-row md:space-x-16">
+        <div class="md:basis-1/2">
+            <h2>Adresse</h2>
+            <strong>
+                {address}<br/>
+                {postCode} {city}
+            </strong>
+            
+            <p class="my-2">{infos}</p>
+            <Image class="rounded-md w-full" src={devant} width={700}   height={300} format="webp" alt="Le magasin" />
+        </div>
+
+        <div class="mt-4 mb:mt-0">
+            <h2>Horaires d'ouverture</h2>
+            <table class="table-auto">
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Lundi
+                    </th>
+                    <td>
+                        {monday}
+                    </td>
+                </tr>
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Mardi
+                    </th>
+                    <td>
+                        {tuesday}
+                    </td>
+                </tr>
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Mercredi
+                    </th>
+                    <td>
+                        {wednesday}
+                    </td>
+                </tr>
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Jeudi
+                    </th>
+                    <td>
+                        {thursday}
+                    </td>
+                </tr>
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Vendredi
+                    </th>
+                    <td>
+                        {friday}
+                    </td>
+                </tr>
+                <tr class="border-b border-secondary">
+                    <th class="px-6 py-4">
+                        Samedi
+                    </th>
+                    <td>
+                        {saturday}
+                    </td>
+                </tr>
+                <tr >
+                    <th class="px-6 py-4">
+                        Dimanche
+                    </th>
+                    <td>
+                        {sunday}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

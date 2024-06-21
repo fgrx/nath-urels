@@ -1,0 +1,19 @@
+---
+import Image from "astro/components/Image.astro"
+
+import aubergineImg from "@assets/images/aubergines.jpg"
+import pommesImg from "@assets/images/pommes.jpg"
+import serreFleursImg from "@assets/images/serre_fleurs.jpg"
+import fleurs from "@assets/images/fleurs.jpg"
+---
+
+<div class="bg-primary px-4 md:px-0 py-4 my-6">
+    <div class="container mx-auto center">
+        <div class="center grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
+            <Image class="rounded-md"  src={serreFleursImg} width={400}   height={300} format="webp" alt="Photo de la serre" />
+            <Image class="rounded-md"  src={pommesImg} width={400}   height={300} format="webp" alt="Photo de la serre" />
+            <Image class="rounded-md"  src={aubergineImg} width={400}   height={300} format="webp" alt="Photo de la serre" />
+            <Image class="rounded-md"  src={fleurs} width={400}   height={300} format="webp" alt="Photo de la serre" />
+        </div>
+    </div>
+</div>

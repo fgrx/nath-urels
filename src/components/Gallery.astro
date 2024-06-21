@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+const { documents } = Astro.props;
+
+type Document={
+  alternativeText:string;
+  image:ImageMetadata
+}
+
+const typedDocs = documents as Document[];
+---
+
+<template>
+  {documents.lenght}
+  <section v-if="documents">
+    
+    <div class=" grid md:grid-cols-{documents.length} gap-2 my-4">
+      {
+        typedDocs.map(doc=>{
+            <div>
+           <Image
+          src={doc.image}
+          alt={doc.alternativeText}
+          format="webp"
+          loading="lazy"
+        />
+              </div>
+        })
+      }
+    </div>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+</style>

@@ -1,0 +1,26 @@
+---
+import Image from "astro/components/Image.astro"
+import warning from "@content/warning.json"
+
+import warningImage from "@assets/images/warning.png"
+
+const{title,message,isShown}=warning
+---
+
+{isShown &&<section>
+    <div class="bg-warning  py-8">
+        <div class="container text-center  mx-aut px-4 md:px-0">
+            <div class="justify-center items-center  md:text-left md:flex md:space-x-8">
+                <div class="flex  justify-center items-center">
+                    <Image src={warningImage} height="64" width="64" alt="Porte voix attention !" />        
+                </div>
+
+                <div>
+                    <h2 class="text-4xl font-bold ">{title}</h2>
+                    <p class="text-xl">{message}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

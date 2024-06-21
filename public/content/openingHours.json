@@ -1,0 +1,9 @@
+{
+  "monday": "matin : 10h00-13h00, soirée : 17h00-20h00",
+  "tuesday": "matin : 10h00-13h00, soirée : 17h00-20h00",
+  "wednesday": "matin : 9h00-13h00, soirée : 17h00-20h00",
+  "thursday": "matin : 10h00-13h00, soirée : 17h00-20h00",
+  "friday": "matin : 10h00-13h00, soirée : 17h00-20h00",
+  "saturday": "matin : 10h00-13h00, soirée : 16h00-20h00",
+  "sunday": "matin uniquement : 09h00-13h00"
+}

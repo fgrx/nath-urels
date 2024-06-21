@@ -1,0 +1,17 @@
+---
+import Image from 'astro/components/Image.astro';
+
+import TextWithImage from '@components/TextWithImage.astro';
+import ContactForm from "@components/vue/ContactForm.vue"
+
+import potagerImg from "@assets/images/potager.jpg"
+
+---
+
+<TextWithImage order="imageText">
+    <Image class="rounded-md" slot="content1" src={potagerImg} width={800}   height={500} format="webp" alt="Photo de la serre" />
+    <section slot='content2' class="text-dark">
+        <h2>Contact</h2>
+        <ContactForm client:load />    
+    </section>
+</TextWithImage>

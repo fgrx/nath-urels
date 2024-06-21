@@ -1,0 +1,14 @@
+---
+import Image from "astro/components/Image.astro";
+const{bgImage,logoImage}=Astro.props;
+---
+<div class="relative">
+    <Image class="w-full object-cover" height="500" width="1400"  src={bgImage} alt="Hero image" />
+    <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+    <div class="absolute inset-0  flex items-center">
+        <div class="container mx-auto">
+
+            <Image class="px-2 py-2 h-48 w-48 md:h-96 md:w-96" height="620" width="620"  src={logoImage} alt="Logo du site" />
+        </div>
+    </div>
+</div>
