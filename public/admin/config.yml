@@ -10,7 +10,7 @@ collections:
     files:
       - name: "products"
         label: "Produits en vente"
-        file: "site/content/products.json"
+        file: "/public/content/products.json"
         fields:
           - name: "title"
             label: "Titre à afficher"
@@ -23,7 +23,7 @@ collections:
             widget: "markdown"
       - name: "openingHours"
         label: "horaires d'ouverture"
-        file: "site/content/openingHours.json"
+        file: "/public/content/openingHours.json"
         fields:
           - name: "monday"
             label: "Lundi"
@@ -48,7 +48,7 @@ collections:
             widget: "string"
       - name: "warning"
         label: "Message important"
-        file: "site/content/warning.json"
+        file: "/public/content/warning.json"
         fields:
           - name: "isShown"
             label: "Afficher le message ?"
@@ -61,7 +61,7 @@ collections:
             widget: "string"
       - name: "general"
         label: "Informations générales"
-        file: "site/content/general.json"
+        file: "/public/content/general.json"
         fields:
           - name: "title"
             label: "Titre du site"
