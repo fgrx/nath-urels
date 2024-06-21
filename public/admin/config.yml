@@ -3,14 +3,14 @@ backend:
   branch: master
 local_backend: true
 media_folder: "images"
-public_folder: "/images"
+public_folder: "/public"
 collections:
   - name: "config"
     label: "Configuration du site"
     files:
       - name: "products"
         label: "Produits en vente"
-        file: "content/products.json"
+        file: "site/content/products.json"
         fields:
           - name: "title"
             label: "Titre à afficher"
@@ -23,7 +23,7 @@ collections:
             widget: "markdown"
       - name: "openingHours"
         label: "horaires d'ouverture"
-        file: "content/openingHours.json"
+        file: "site/content/openingHours.json"
         fields:
           - name: "monday"
             label: "Lundi"
@@ -48,7 +48,7 @@ collections:
             widget: "string"
       - name: "warning"
         label: "Message important"
-        file: "content/warning.json"
+        file: "site/content/warning.json"
         fields:
           - name: "isShown"
             label: "Afficher le message ?"
@@ -61,7 +61,7 @@ collections:
             widget: "string"
       - name: "general"
         label: "Informations générales"
-        file: "content/general.json"
+        file: "site/content/general.json"
         fields:
           - name: "title"
             label: "Titre du site"
