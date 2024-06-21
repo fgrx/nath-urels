@@ -14,12 +14,12 @@ const {address,postCode,city,infos}=location
     <div class="px-4 md:px-0 my-12 md:flex md:flex-row md:space-x-16">
         <div class="md:basis-1/2">
             <h2>Adresse</h2>
-            <p class="font-bold">
+            <div class="font-bold">
                 <address>
                     {address}<br/>
                     {postCode} {city}
                 </address>
-            </p>
+            </div>
             
             <p class="my-2">{infos}</p>
             <Image class="rounded-md w-full" src={devant} width={700}   height={300} format="webp" alt="Le magasin" />

@@ -2,22 +2,26 @@
 import { computed, toRef } from "vue";
 
 const props = defineProps({
-  color: { type: String, default: "primary" },
+  color: { type: String, default: "primary", required: "false" },
   textColor: {
     type: String,
     default: "light",
+    required: false,
   },
   typeButton: {
     type: String,
     default: "button",
+    required: false,
   },
   disabled: {
     type: Boolean,
     default: false,
+    required: false,
   },
   to: {
     type: String,
     default: "#",
+    required: false,
   },
 });
 
