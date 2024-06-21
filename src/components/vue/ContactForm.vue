@@ -80,7 +80,7 @@ export default {
 </script>
 
 <template>
-  <div class="mt-5">
+  <div class="">
     <transition name="slide">
       <div>
         <Alert v-if="isSent" type="success" title="Message envoyé"
@@ -103,7 +103,7 @@ export default {
           method="POST"
           netlify
         >
-          <p class="mt-5">
+          <p class="">
             <label class="block font-semibold"
               >Votre nom :
               <input

@@ -1,17 +1,26 @@
 ---
 import Image from 'astro/components/Image.astro';
 
+import address from "@content/address.json"
+
 import TextWithImage from '@components/TextWithImage.astro';
 import ContactForm from "@components/vue/ContactForm.vue"
+import Btn from "@components/vue/Btn.vue"
 
 import potagerImg from "@assets/images/potager.jpg"
 
+const {phone}=address;
+const callablePhone=`tel:${phone}`
 ---
 
 <TextWithImage order="imageText">
     <Image class="rounded-md" slot="content1" src={potagerImg} width={800}   height={500} format="webp" alt="Photo de la serre" />
     <section slot='content2' class="text-dark">
         <h2>Contact</h2>
+        <p>Vous pouvez me contacter par téléphone ou SMS au {phone}</p>
+        <div class="text-center"><a href={callablePhone}><Btn>Me téléphoner</btn></a></div>
+
+        <h3 class="mt-8">Contactez-moi par mail</h3>
         <ContactForm client:load />    
     </section>
 </TextWithImage>
