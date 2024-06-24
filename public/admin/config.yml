@@ -58,7 +58,7 @@ collections:
             widget: "string"
           - name: "message"
             label: "Contenu du message"
-            widget: "string"
+            widget: "text"
       - name: "general"
         label: "Informations générales"
         file: "/public/content/general.json"

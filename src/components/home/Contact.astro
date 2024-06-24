@@ -8,19 +8,29 @@ import ContactForm from "@components/vue/ContactForm.vue"
 import Btn from "@components/vue/Btn.vue"
 
 import potagerImg from "@assets/images/potager.jpg"
+import portrait from "@assets/images/nathalie.jpg"
 
 const {phone}=address;
 const callablePhone=`tel:${phone}`
 ---
 
 <TextWithImage order="imageText">
-    <Image class="rounded-md" slot="content1" src={potagerImg} width={500}   height={500} format="webp" alt="Photo de la serre" />
+    <Image class="rounded-md" slot="content1" src={potagerImg} width={1000}   height={1000} format="webp" alt="Photo de la serre" />
     <section slot='content2' class="text-dark">
         <h2>Contact</h2>
-        <p>Vous pouvez me contacter par téléphone ou SMS au {phone}</p>
-        <div class="text-center"><a href={callablePhone}><Btn>Me téléphoner</Btn></a></div>
+        <div class="md:flex items-center md:space-x-6 align-middle">
+            <div class="">
+                <Image src={portrait} height="350" width="350" class="rounded-full mb-3 object-scale-down h-48 w-48 border-2 border-primary" alt="portrait de Nathalie"/>
+            </div>
+            <div class="text-xl text-center md:text-left">
+                <p>Vous pouvez me contacter par téléphone ou SMS au {phone}</p>
+                <div ><a href={callablePhone}><Btn>Me téléphoner</Btn></a></div>
 
-        <h3 class="mt-8">Contactez-moi par mail</h3>
+                
+            </div>
+        </div>
+
+        <h3 class="mt-10">Contactez-moi par mail</h3>
         <ContactForm client:load />    
     </section>
 </TextWithImage>
